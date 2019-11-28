@@ -1,0 +1,4 @@
+<div class="product-list">
+  <app-product-card *ngFor="let product of (list | async)" [buttonText]="buttonText"
+                    [product]="product" (handleProduct)="onHandleProductClick($event)"></app-product-card>
+</div>
