@@ -1,0 +1,4 @@
+<h2>Our fresh bread:</h2>
+<app-products-list [list]="products" buttonText="Add to Cart"
+                   (handleProduct)="onAddToCart($event)"></app-products-list>
+<router-outlet></router-outlet>

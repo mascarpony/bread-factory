@@ -21,6 +21,10 @@ export class ProductsService {
     return of(this.products);
   }
 
+  getProduct(id): Observable<Product> {
+    return of(this.products.find(product => product.id === id));
+  }
+
   getCart(): Observable<Product[]> {
     return this.cart.asObservable();
   }
