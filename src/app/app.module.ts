@@ -1,28 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductCardComponent } from './components/product-card/product-card.component';
-import { ProductsListComponent } from './components/products-list/products-list.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ProductModule } from './product/product.module';
+import { SharedModule } from './shared/shared.module';
 
-const MAT_MODULES = [
-  MatButtonModule,
-  MatCardModule,
-];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductCardComponent,
-    ProductsListComponent
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ...MAT_MODULES,
+    ProductModule,
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,4 @@
-<button mat-button>Bread</button> <button mat-button>Cart</button>
-<h2>Our fresh bread:</h2>
-<app-products-list [list]="products" buttonText="Add to Cart"
-                   (handleProduct)="onAddToCart($event)"></app-products-list>
+<button mat-button routerLink="/product">Bread</button>
+<button mat-button routerLink="/cart">Cart</button>
 
-<h2>Cart:</h2>
-<app-products-list [list]="cart" buttonText="Remove from Cart"
-                   (handleProduct)="onRemoveFromCart($event)"></app-products-list>
+<router-outlet></router-outlet>
